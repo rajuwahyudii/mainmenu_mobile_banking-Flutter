@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
-import 'package:mobile_banking_menu/widgets/history.dart';
+import 'package:mobile_banking_menu/widgets/listhistory.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -24,7 +24,6 @@ class MainMenu extends StatelessWidget {
         child: SafeArea(
           child: SingleChildScrollView(
             child: SizedBox(
-              height: size.height,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,24 +32,12 @@ class MainMenu extends StatelessWidget {
                     "assets/images/card.png",
                     width: size.width * 0.7,
                   ),
-                  Container(
-                      decoration: BoxDecoration(
-                        color: greyBackgroundColor,
-                        borderRadius: BorderRadius.circular(
-                          31,
-                        ),
-                      ),
-                      child: const History()),
+                  ListHistory(size: size.height)
                 ],
               ),
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: Container(
-        width: 10,
-        height: 80,
-        color: greyBackgroundColor,
       ),
     );
   }
