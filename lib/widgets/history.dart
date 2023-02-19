@@ -2,14 +2,15 @@ import "package:flutter/material.dart";
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
-class History extends StatelessWidget {
-  const History({Key? key}) : super(key: key);
+class HistoryWidget extends StatelessWidget {
+  const HistoryWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Center(
       child: Container(
+        margin: const EdgeInsets.only(bottom: 10),
         width: size.width * 0.90,
         height: 100,
         decoration: BoxDecoration(

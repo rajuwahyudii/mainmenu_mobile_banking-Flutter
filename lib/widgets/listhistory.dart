@@ -1,11 +1,13 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/widgets/history.dart';
 
-class ListHistory extends StatelessWidget {
+class ListHistoryWidget extends StatelessWidget {
   double width;
   double height;
-  ListHistory({
+  ListHistoryWidget({
     required this.width,
     required this.height,
     Key? key,
@@ -14,9 +16,8 @@ class ListHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
       width: width,
-      padding: const EdgeInsets.fromLTRB(0, 15, 0, 100),
+      padding: const EdgeInsets.fromLTRB(0, 15, 0, 50),
       decoration: const BoxDecoration(
         color: greyBackgroundColor,
         borderRadius: BorderRadius.only(
@@ -26,10 +27,16 @@ class ListHistory extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: const <Widget>[
-          History(),
-          History(),
+          Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Text("Recent Transactions"),
+          ),
+          HistoryWidget(),
+          HistoryWidget(),
+          HistoryWidget(),
+          HistoryWidget(),
         ],
       ),
     );

@@ -31,3 +31,11 @@ const TextStyle dateTextStyle = TextStyle(
   fontWeight: FontWeight.w300,
   fontSize: 10,
 );
+
+//under history textstyle
+const TextStyle textButtonTextStyle = TextStyle(
+  fontFamily: 'inter',
+  fontWeight: FontWeight.w300,
+  fontSize: 12,
+  color: greyBackgroundColor,
+);

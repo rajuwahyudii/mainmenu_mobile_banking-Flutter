@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
+import 'package:mobile_banking_menu/widgets/button/buttonmenu.dart';
 import 'package:mobile_banking_menu/widgets/listhistory.dart';
 
 class MainMenu extends StatelessWidget {
@@ -14,7 +15,6 @@ class MainMenu extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: size.width,
-        height: size.height,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/background.png"),
@@ -24,7 +24,6 @@ class MainMenu extends StatelessWidget {
         child: SafeArea(
           child: SingleChildScrollView(
             child: SizedBox(
-              height: size.height,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,7 +32,8 @@ class MainMenu extends StatelessWidget {
                     "assets/images/card.png",
                     width: size.width * 0.7,
                   ),
-                  ListHistory(
+                  const ButtonMenuWidget(),
+                  ListHistoryWidget(
                     width: size.width,
                     height: size.height * 0.5,
                   )
