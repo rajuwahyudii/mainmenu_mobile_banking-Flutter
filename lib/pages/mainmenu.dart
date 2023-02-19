@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/widgets/history.dart';
 
 class MainMenu extends StatelessWidget {
@@ -28,7 +29,7 @@ class MainMenu extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: greyBackgroundColor,
       body: SingleChildScrollView(
         child: Column(
           children: const [History()],
