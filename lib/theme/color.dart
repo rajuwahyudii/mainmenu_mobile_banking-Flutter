@@ -10,6 +10,7 @@ const Color greyButtonColor = Color(0xffD9D9D9);
 //color for text
 const Color blackTextColor = Color(0xff000000);
 const Color darkTextColor = Color(0xff353B43);
+const Color dateTextColor = Color(0xff867d7d);
 const Color lightTextColor = Color(0xffFFFFFF);
 const Color cashOutTextColor = Color(0xffCD4431);
 const Color cashInTextColor = Color(0xff3ECD31);

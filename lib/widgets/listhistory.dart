@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
+import 'package:mobile_banking_menu/theme/font.dart';
 import 'package:mobile_banking_menu/widgets/history.dart';
 
 class ListHistoryWidget extends StatelessWidget {
@@ -30,8 +31,18 @@ class ListHistoryWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const <Widget>[
           Padding(
-            padding: EdgeInsets.only(left: 20, bottom: 50),
-            child: Text("Recent Transactions"),
+            padding: EdgeInsets.only(left: 20, bottom: 30),
+            child: Text(
+              "Recent Transactions",
+              style: recentTransactionTextStyle,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 20, bottom: 10),
+            child: Text(
+              "Today",
+              style: dateTransactionTextStyle,
+            ),
           ),
           HistoryWidget(),
           HistoryWidget(),

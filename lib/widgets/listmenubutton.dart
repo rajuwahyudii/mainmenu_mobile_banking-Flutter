@@ -6,19 +6,19 @@ class ListMenuButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
+      width: size.width,
       padding: const EdgeInsets.only(top: 50, bottom: 50),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
-            ButtonMenuWidget(),
-            ButtonMenuWidget(),
-            ButtonMenuWidget(),
-            ButtonMenuWidget(),
-            ButtonMenuWidget(),
-            ButtonMenuWidget(),
+          children: [
+            ButtonMenuWidget(
+              status: "Transfer",
+              image: "wallet.png",
+            ),
           ],
         ),
       ),

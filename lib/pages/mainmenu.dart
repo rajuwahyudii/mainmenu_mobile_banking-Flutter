@@ -32,7 +32,7 @@ class MainMenu extends StatelessWidget {
                   InformationBalanceWidget(width: size.width),
                   Image.asset(
                     "assets/images/card.png",
-                    width: size.width * 0.7,
+                    width: size.width * 0.8,
                   ),
                   const ListMenuButtonWidget(),
                   ListHistoryWidget(

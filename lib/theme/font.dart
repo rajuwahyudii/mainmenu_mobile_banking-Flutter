@@ -55,3 +55,19 @@ const TextStyle availablebalanceTextStyle = TextStyle(
   fontSize: 12,
   color: greyBackgroundColor,
 );
+
+//recenttransaction balance textstyle
+const TextStyle recentTransactionTextStyle = TextStyle(
+  fontFamily: 'inter',
+  fontWeight: FontWeight.w800,
+  fontSize: 20,
+  color: darkTextColor,
+);
+
+//datetransaction balance textstyle
+const TextStyle dateTransactionTextStyle = TextStyle(
+  fontFamily: 'inter',
+  fontWeight: FontWeight.w800,
+  fontSize: 14,
+  color: dateTextColor,
+);
