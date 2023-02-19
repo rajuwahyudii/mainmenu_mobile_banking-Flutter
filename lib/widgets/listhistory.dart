@@ -3,21 +3,25 @@ import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/widgets/history.dart';
 
 class ListHistory extends StatelessWidget {
-  double size;
+  double width;
+  double height;
   ListHistory({
-    required this.size,
+    required this.width,
+    required this.height,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size,
+      height: height,
+      width: width,
       padding: const EdgeInsets.fromLTRB(0, 15, 0, 100),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: greyBackgroundColor,
-        borderRadius: BorderRadius.circular(
-          31,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(31),
+          topRight: Radius.circular(31),
         ),
       ),
       child: Column(

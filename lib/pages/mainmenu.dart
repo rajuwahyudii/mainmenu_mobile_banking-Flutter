@@ -24,15 +24,19 @@ class MainMenu extends StatelessWidget {
         child: SafeArea(
           child: SingleChildScrollView(
             child: SizedBox(
+              height: size.height,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     "assets/images/card.png",
                     width: size.width * 0.7,
                   ),
-                  ListHistory(size: size.height)
+                  ListHistory(
+                    width: size.width,
+                    height: size.height * 0.5,
+                  )
                 ],
               ),
             ),
