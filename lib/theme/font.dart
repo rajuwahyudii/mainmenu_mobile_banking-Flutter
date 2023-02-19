@@ -39,3 +39,11 @@ const TextStyle textButtonTextStyle = TextStyle(
   fontSize: 12,
   color: greyBackgroundColor,
 );
+
+//balance Textstyle
+const TextStyle balanceTextStyle = TextStyle(
+  fontFamily: 'inter',
+  fontWeight: FontWeight.w700,
+  fontSize: 26,
+  color: greyBackgroundColor,
+);

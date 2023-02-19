@@ -30,7 +30,7 @@ class ListHistoryWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const <Widget>[
           Padding(
-            padding: EdgeInsets.only(left: 20.0),
+            padding: EdgeInsets.only(left: 20, bottom: 50),
             child: Text("Recent Transactions"),
           ),
           HistoryWidget(),
