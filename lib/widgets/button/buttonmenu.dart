@@ -8,27 +8,32 @@ class ButtonMenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Column(
-        children: [
-          Container(
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: greyBackgroundColor,
+      child: Container(
+        margin: const EdgeInsets.only(
+          left: 40,
+        ),
+        child: Column(
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: greyBackgroundColor,
+              ),
+              child: const Icon(
+                Icons.abc,
+              ),
             ),
-            child: const Icon(
-              Icons.abc,
+            const SizedBox(
+              height: 6,
             ),
-          ),
-          const SizedBox(
-            height: 6,
-          ),
-          const Text(
-            "Transfer",
-            style: textButtonTextStyle,
-          )
-        ],
+            const Text(
+              "Transfer",
+              style: textButtonTextStyle,
+            )
+          ],
+        ),
       ),
     );
   }

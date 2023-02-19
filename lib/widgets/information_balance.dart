@@ -13,11 +13,14 @@ class InformationBalanceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      padding: const EdgeInsets.only(top: 10, bottom: 20),
+      padding: const EdgeInsets.only(
+        top: 50,
+        bottom: 30,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
+          SizedBox(
             width: width * 0.7,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +44,10 @@ class InformationBalanceWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                Text("Available Balance")
+                const Text(
+                  "Available Balance",
+                  style: availablebalanceTextStyle,
+                )
               ],
             ),
           ),

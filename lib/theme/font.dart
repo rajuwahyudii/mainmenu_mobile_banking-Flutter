@@ -47,3 +47,11 @@ const TextStyle balanceTextStyle = TextStyle(
   fontSize: 26,
   color: greyBackgroundColor,
 );
+
+//available balance textstyle
+const TextStyle availablebalanceTextStyle = TextStyle(
+  fontFamily: 'inter',
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+  color: greyBackgroundColor,
+);

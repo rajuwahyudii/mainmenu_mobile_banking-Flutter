@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/widgets/button/buttonmenu.dart';
 import 'package:mobile_banking_menu/widgets/information_balance.dart';
 import 'package:mobile_banking_menu/widgets/listhistory.dart';
+import 'package:mobile_banking_menu/widgets/listmenubutton.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class MainMenu extends StatelessWidget {
                     "assets/images/card.png",
                     width: size.width * 0.7,
                   ),
-                  const ButtonMenuWidget(),
+                  const ListMenuButtonWidget(),
                   ListHistoryWidget(
                     width: size.width,
                     height: size.height * 0.5,
