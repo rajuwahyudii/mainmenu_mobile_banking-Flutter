@@ -12,33 +12,45 @@ class MainMenu extends StatelessWidget {
     //make size with media query
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(
-          Icons.lens_rounded,
-          color: Colors.lightGreen,
-          size: 21,
+      body: Container(
+        width: size.width,
+        height: size.height,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/background.png"),
+            fit: BoxFit.cover,
+          ),
         ),
-        actions: const [
-          Icon(
-            Icons.notifications,
-            color: Colors.white,
-            size: 25,
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: SizedBox(
+              height: size.height,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/images/card.png",
+                    width: size.width * 0.7,
+                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                        color: greyBackgroundColor,
+                        borderRadius: BorderRadius.circular(
+                          31,
+                        ),
+                      ),
+                      child: const History()),
+                ],
+              ),
+            ),
           ),
-          SizedBox(
-            width: 20,
-          ),
-        ],
-      ),
-      backgroundColor: greyBackgroundColor,
-      body: SingleChildScrollView(
-        child: Column(
-          children: const [History()],
         ),
       ),
       bottomNavigationBar: Container(
         width: 10,
         height: 80,
-        color: Colors.grey[300],
+        color: greyBackgroundColor,
       ),
     );
   }

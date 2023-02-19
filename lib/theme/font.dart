@@ -6,7 +6,7 @@ const TextStyle cashoutTextStyle = TextStyle(
   fontFamily: 'inter',
   fontWeight: FontWeight.w700,
   color: cashOutTextColor,
-  fontSize: 11,
+  fontSize: 10,
 );
 
 //cashin history textstyle
@@ -14,7 +14,7 @@ const TextStyle cashinTextStyle = TextStyle(
   fontFamily: 'inter',
   fontWeight: FontWeight.w700,
   color: cashInTextColor,
-  fontSize: 11,
+  fontSize: 10,
 );
 
 //status history textstyle
@@ -22,12 +22,12 @@ const TextStyle statusTextStyle = TextStyle(
   fontFamily: 'inter',
   fontWeight: FontWeight.w800,
   color: blackTextColor,
-  fontSize: 11,
+  fontSize: 14,
 );
 
 //date history textstyle
 const TextStyle dateTextStyle = TextStyle(
   fontFamily: 'inter',
-  fontWeight: FontWeight.w100,
+  fontWeight: FontWeight.w300,
   fontSize: 10,
 );

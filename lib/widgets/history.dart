@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:google_fonts/google_fonts.dart";
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
@@ -22,7 +21,7 @@ class History extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(
@@ -35,6 +34,9 @@ class History extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  width: 20,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +45,13 @@ class History extends StatelessWidget {
                       "Transfer",
                       style: statusTextStyle,
                     ),
-                    Text("20 januari"),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "10/30/40 | 30:40:89",
+                      style: dateTextStyle,
+                    ),
                   ],
                 )
               ],
