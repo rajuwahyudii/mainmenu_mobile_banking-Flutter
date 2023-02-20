@@ -29,25 +29,53 @@ class ListHistoryWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const <Widget>[
-          Padding(
+        children: <Widget>[
+          const Padding(
             padding: EdgeInsets.only(left: 20, bottom: 30),
             child: Text(
               "Recent Transactions",
               style: recentTransactionTextStyle,
             ),
           ),
-          Padding(
+
+          //time of transaction overhere
+          const Padding(
             padding: EdgeInsets.only(left: 20, bottom: 10),
             child: Text(
               "Today",
               style: dateTransactionTextStyle,
             ),
           ),
-          HistoryWidget(),
-          HistoryWidget(),
-          HistoryWidget(),
-          HistoryWidget(),
+
+          //add new history in here
+          HistoryWidget(
+            date: "1/2/3",
+            time: "05:05:05",
+            status: "Salary",
+            isCahsin: true,
+            balance: 30000000,
+          ),
+          HistoryWidget(
+            date: "1/2/3",
+            time: "05:05:05",
+            status: "Transfer",
+            isCahsin: false,
+            balance: 70000,
+          ),
+          HistoryWidget(
+            date: "1/2/3",
+            time: "05:05:05",
+            status: "Salary",
+            isCahsin: true,
+            balance: 50000,
+          ),
+          HistoryWidget(
+            date: "1/2/3",
+            time: "05:05:05",
+            status: "Payment",
+            isCahsin: false,
+            balance: 900000,
+          ),
         ],
       ),
     );

@@ -3,11 +3,27 @@ import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
 class HistoryWidget extends StatelessWidget {
-  const HistoryWidget({Key? key}) : super(key: key);
+  //parameters
+  String date;
+  String time;
+  String status;
+  bool isCahsin;
+  int balance;
+  HistoryWidget({
+    //required parameters of history
+    required this.time,
+    required this.date,
+    required this.status,
+    required this.isCahsin,
+    required this.balance,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    //body of history widget
     return Center(
       child: Container(
         margin: const EdgeInsets.only(bottom: 10),
@@ -33,6 +49,10 @@ class HistoryWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5),
                       color: greyButtonColor,
                     ),
+                    child: Icon(
+                      isCahsin ? Icons.arrow_upward : Icons.arrow_downward,
+                      color: isCahsin ? cashInTextColor : cashOutTextColor,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -41,25 +61,25 @@ class HistoryWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
-                      "Transfer",
+                      status,
                       style: statusTextStyle,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
-                      "10/30/40 | 30:40:89",
+                      "$date | $time",
                       style: dateTextStyle,
                     ),
                   ],
                 )
               ],
             ),
-            const Text(
-              "+ Rp. 20.000.000",
-              style: cashinTextStyle,
+            Text(
+              isCahsin == true ? "+ $balance" : "- $balance",
+              style: isCahsin == true ? cashinTextStyle : cashoutTextStyle,
             )
           ],
         ),
