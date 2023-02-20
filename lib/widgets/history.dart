@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:intl/intl.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
@@ -22,6 +23,10 @@ class HistoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formatCurrency = NumberFormat.currency(
+      name: "Rp. ",
+      decimalDigits: 0,
+    );
     Size size = MediaQuery.of(context).size;
 
     //body of history widget
@@ -80,7 +85,9 @@ class HistoryWidget extends StatelessWidget {
               ],
             ),
             Text(
-              isCahsin == true ? "+ $balance" : "- $balance",
+              isCahsin == true
+                  ? "+ ${formatCurrency.format(balance)}"
+                  : "- ${formatCurrency.format(balance)}",
               style: isCahsin == true ? cashinTextStyle : cashoutTextStyle,
             )
           ],

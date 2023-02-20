@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
@@ -20,6 +21,10 @@ class InformationBalanceWidget extends StatefulWidget {
 class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
   @override
   Widget build(BuildContext context) {
+    final formatCurrency = NumberFormat.currency(
+      name: "Rp. ",
+      decimalDigits: 0,
+    );
     return Container(
       width: widget.width,
       padding: const EdgeInsets.only(
@@ -30,14 +35,16 @@ class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SizedBox(
-            width: widget.width * 0.7,
+            width: widget.width * 0.8,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
                     Text(
-                      widget.id == 1 ? "Rp.   - " : "Rp. ${widget.balance}",
+                      widget.id == 1
+                          ? "Rp.   - "
+                          : formatCurrency.format(widget.balance),
                       style: balanceTextStyle,
                     ),
                     const SizedBox(
