@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
+// ignore: must_be_immutable
 class HistoryWidget extends StatelessWidget {
   //parameters
   String date;
@@ -50,8 +51,9 @@ class HistoryWidget extends StatelessWidget {
                       color: greyButtonColor,
                     ),
                     child: Icon(
-                      isCahsin ? Icons.arrow_upward : Icons.arrow_downward,
-                      color: isCahsin ? cashInTextColor : cashOutTextColor,
+                      isCahsin ? Icons.attach_money : Icons.money_off,
+                      size: 26,
+                      color: blackTextColor,
                     ),
                   ),
                 ),
