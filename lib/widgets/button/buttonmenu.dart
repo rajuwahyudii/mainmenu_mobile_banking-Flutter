@@ -14,6 +14,7 @@ class ButtonMenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      //action button
       onTap: () {},
       child: Container(
         margin: const EdgeInsets.only(
@@ -29,6 +30,7 @@ class ButtonMenuWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   color: greyBackgroundColor,
                 ),
+                //icon button
                 child: Image.asset(
                   "assets/images/icons/$image",
                   scale: 3,
@@ -36,6 +38,8 @@ class ButtonMenuWidget extends StatelessWidget {
             const SizedBox(
               height: 6,
             ),
+
+            //text for button
             Text(
               status,
               style: textButtonTextStyle,

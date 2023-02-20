@@ -23,6 +23,7 @@ class HistoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //format currency indonesia
     final formatCurrency = NumberFormat.currency(
       name: "Rp. ",
       decimalDigits: 0,

@@ -4,10 +4,12 @@ import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
 class InformationBalanceWidget extends StatefulWidget {
+  //parameters
   int balance;
   double width;
   int id = 1;
   InformationBalanceWidget({
+    //required parameters
     required this.balance,
     required this.width,
     Key? key,
@@ -21,10 +23,13 @@ class InformationBalanceWidget extends StatefulWidget {
 class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
   @override
   Widget build(BuildContext context) {
+    //format currency indonesia
     final formatCurrency = NumberFormat.currency(
       name: "Rp. ",
       decimalDigits: 0,
     );
+
+    //body of information balance
     return Container(
       width: widget.width,
       padding: const EdgeInsets.only(
@@ -41,6 +46,7 @@ class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
               children: [
                 Row(
                   children: [
+                    //nominal balance
                     Text(
                       widget.id == 1
                           ? "Rp.   - "
@@ -50,6 +56,8 @@ class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
                     const SizedBox(
                       width: 20,
                     ),
+
+                    //eye icon
                     IconButton(
                       onPressed: () {
                         setState(() {
@@ -66,6 +74,8 @@ class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
                     )
                   ],
                 ),
+
+                //text available
                 const Text(
                   "Available Balance",
                   style: availablebalanceTextStyle,
@@ -73,6 +83,8 @@ class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
               ],
             ),
           ),
+
+          //account icon
           const Icon(
             Icons.account_circle_outlined,
             color: lightTextColor,

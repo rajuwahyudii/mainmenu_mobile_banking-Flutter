@@ -6,9 +6,11 @@ import 'package:mobile_banking_menu/theme/font.dart';
 import 'package:mobile_banking_menu/widgets/history.dart';
 
 class ListHistoryWidget extends StatelessWidget {
+  //parameters
   double width;
   double height;
   ListHistoryWidget({
+    //required parameters
     required this.width,
     required this.height,
     Key? key,
@@ -16,6 +18,7 @@ class ListHistoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //body of list history
     return Container(
       width: width,
       padding: const EdgeInsets.fromLTRB(0, 15, 0, 50),
@@ -30,6 +33,7 @@ class ListHistoryWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          //text recent transactions
           const Padding(
             padding: EdgeInsets.only(left: 20, bottom: 30),
             child: Text(
