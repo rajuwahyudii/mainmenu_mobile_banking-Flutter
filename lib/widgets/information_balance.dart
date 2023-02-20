@@ -2,17 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:mobile_banking_menu/theme/color.dart';
 import 'package:mobile_banking_menu/theme/font.dart';
 
-class InformationBalanceWidget extends StatelessWidget {
+class InformationBalanceWidget extends StatefulWidget {
+  int balance;
   double width;
+  int id = 1;
   InformationBalanceWidget({
+    required this.balance,
     required this.width,
     Key? key,
   }) : super(key: key);
 
   @override
+  State<InformationBalanceWidget> createState() =>
+      _InformationBalanceWidgetState();
+}
+
+class _InformationBalanceWidgetState extends State<InformationBalanceWidget> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
+      width: widget.width,
       padding: const EdgeInsets.only(
         top: 50,
         bottom: 30,
@@ -21,23 +30,29 @@ class InformationBalanceWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SizedBox(
-            width: width * 0.7,
+            width: widget.width * 0.7,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    const Text(
-                      "Rp. 4.000.000",
+                    Text(
+                      widget.id == 1 ? "Rp.   - " : "Rp. ${widget.balance}",
                       style: balanceTextStyle,
                     ),
                     const SizedBox(
                       width: 20,
                     ),
                     IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.remove_red_eye,
+                      onPressed: () {
+                        setState(() {
+                          widget.id == 1 ? widget.id = 2 : widget.id = 1;
+                        });
+                      },
+                      icon: Icon(
+                        widget.id == 1
+                            ? Icons.visibility
+                            : Icons.visibility_off,
                         size: 20,
                         color: lightTextColor,
                       ),

@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_menu/widgets/button/buttonmenu.dart';
 import 'package:mobile_banking_menu/widgets/information_balance.dart';
 import 'package:mobile_banking_menu/widgets/listhistory.dart';
 import 'package:mobile_banking_menu/widgets/listmenubutton.dart';
@@ -29,7 +28,10 @@ class MainMenu extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  InformationBalanceWidget(width: size.width),
+                  InformationBalanceWidget(
+                    width: size.width,
+                    balance: 10000000,
+                  ),
                   Image.asset(
                     "assets/images/card.png",
                     width: size.width * 0.8,
