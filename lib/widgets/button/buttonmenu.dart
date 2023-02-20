@@ -17,7 +17,8 @@ class ButtonMenuWidget extends StatelessWidget {
       onTap: () {},
       child: Container(
         margin: const EdgeInsets.only(
-          left: 40,
+          left: 20,
+          right: 10,
         ),
         child: Column(
           children: [

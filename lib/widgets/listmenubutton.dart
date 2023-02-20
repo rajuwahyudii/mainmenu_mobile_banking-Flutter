@@ -15,9 +15,26 @@ class ListMenuButtonWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            //add button menu in here
             ButtonMenuWidget(
               status: "Transfer",
+              image: "transaction.png",
+            ),
+            ButtonMenuWidget(
+              status: "E-Wallet",
               image: "wallet.png",
+            ),
+            ButtonMenuWidget(
+              status: "Payment",
+              image: "cart.png",
+            ),
+            ButtonMenuWidget(
+              status: "Saving",
+              image: "saving.png",
+            ),
+            ButtonMenuWidget(
+              status: "Others",
+              image: "menu.png",
             ),
           ],
         ),
